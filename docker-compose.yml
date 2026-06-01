@@ -1,0 +1,36 @@
+
+services:
+  # Service 1: Our Flask Web App Server
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    environment:
+      - MONGO_URI=mongodb://db:27017/lead_db
+      - OLLAMA_HOST=http://ollama:11434  # Tells Flask where the local open-source AI container lives
+      - FLASK_ENV=development
+    depends_on:
+      - db
+      - ollama
+
+  # Service 2: The MongoDB Database Server
+  db:
+    image: mongo:6.0
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  # Service 3: The Local Open-Source AI Server (Ollama)
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama  # Safeguards the downloaded AI model so it doesn't delete
+
+volumes:
+  mongo_data:
+  ollama_data:
