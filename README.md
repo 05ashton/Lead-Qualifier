@@ -15,7 +15,7 @@
 
 ### Links
 *   **Bitbucket Repository:** (https://bitbucket.org/ashton-first-repo/lead_qualifer/src/main/)
-*   **Canvas Video Demo:** [INSERT_YOUR_CANVAS_VIDEO_LINK_HERE]
+*   **Canvas Video Demo:** (https://docs.google.com/videos/d/1KSle7yrkw9e6QgaPwk5zt2o6kHojNR3y1ncOb-m4aI4/edit?usp=sharing)
 
 ---
 
