@@ -34,12 +34,13 @@ This application streamlines the SDR workflow using a **100% offline, locally ho
 1. Ensure **Docker Desktop** is installed and running on your machine.
 2. Clone this repository and navigate to the root directory in your terminal:
    ```bash
-   git clone [https://github.com/05ashton/Lead-Qualifier](https://github.com/yourusername/lead_qualifier.git)
-   cd lead_qualifier
+   git clone https://github.com/05ashton/Lead-Qualifier.git
+   cd Lead-Qualifier
+   ```
 3. Run the following command to build the environment and pull the AI model:
    ```bash
    docker-compose up --build
-
-(Note: On the first run, Docker will automatically download the 1.3GB llama3.2:1b model. Please allow a moment for the Ollama container to initialize.)
-4. Open your web browser and navigate to: http://localhost:5000
-5. To gracefully stop the application, press Ctrl+C in the terminal, or run docker-compose down.
+   ```
+   *(Note: On the first run, Docker will automatically download the 1.3GB `llama3.2:1b` model. Please allow a moment for the Ollama container to initialize.)*
+4. Open your web browser and navigate to: `http://localhost:5000`
+5. To gracefully stop the application, press `Ctrl+C` in the terminal, or run `docker-compose down`.
